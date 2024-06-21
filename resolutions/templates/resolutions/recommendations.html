@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recommendations</title>
+</head>
+<body>
+    {% extends 'resolutions/base.html' %}
+
+    {% block title %}Recommendations{% endblock %}
+
+    {% block content %}
+    <h1>Recommendations</h1>
+    <ul class="list-group">
+    {% for recommendation in recommendations %}
+        <a href="#" class="list-group-item list-group-item-action">
+    {{ recommendation.title }} - {{ recommendation.description }}</a>
+    {% endfor %}
+    </ul>
+    <a href="{% url 'home' %}" class="btn btn-secondary mt-3">Back to Home</a>
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,98 @@
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.content {
+    flex: 1;
+}
+
+/* Custom styles for header */
+.navbar-custom {
+    background-color: #4CAF50; 
+    color: white;
+}
+
+.navbar-custom .navbar-brand, 
+.navbar-custom .nav-link {
+    color: rgb(236, 238, 138);
+}
+
+.navbar-custom .nav-link:hover {
+    color: #D3D3D3;
+}
+
+/* Custom Navbar */
+.navbar-custom {
+    background-color: #2a4f74;
+    padding: 1rem;
+}
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+    
+    color: #97cad3;
+}
+.navbar-custom .nav-link:hover {
+    color: #adb5bd;
+}
+
+/* Buttons */
+.btn-primary-custom {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #fff;
+}
+.btn-primary-custom:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+.btn-secondary-custom {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    color: #fff;
+}
+.btn-secondary-custom:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
+}
+
+/* Cards */
+.card {
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: .5rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Form Styles */
+.form-control {
+    border-radius: .25rem;
+}
+.form-control:focus {
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Custom styles for footer */
+.footer-custom {
+    background-color: #174d79;
+    color: rgb(180, 190, 199);
+    padding: 1rem;
+    text-align: center;
+    bottom: 0;
+}
+
+.footer-custom .text-muted {
+    color: #f7f3f3;
+}

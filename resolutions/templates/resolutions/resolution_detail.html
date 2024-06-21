@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    {% extends 'resolutions/base.html' %}
+
+    {% block content %}
+    <h2>{{ resolution.title }}</h2>
+    <p>{{ resolution.description }}</p>
+    <p>Start Date: {{ resolution.start_date }}</p>
+    <p>End Date: {{ resolution.end_date }}</p>
+
+    <h3>Progress</h3>
+    <ul>
+    {% for progress in progress_list %}
+    <li>{{ progress.date }}: {{ progress.progress }}</li>
+    {% endfor %}
+    </ul>
+
+    <a href="{% url 'add_progress' resolution.id %}">Add Progress</a>
+    {% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    {% extends 'resolutions/base.html' %}
+
+{% block content %}
+<h2>Add Progress for {{ resolution.title }}</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save</button>
+</form>
+{% endblock %}
+
+</body>
+</html>

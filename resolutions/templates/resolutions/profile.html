@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Profile</title>
+</head>
+<body>
+{% extends 'resolutions/base.html' %}
+
+{% block title %}Profile{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="mt-4">My Profile</h1>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">{{ user.username }}</h5>
+            <p class="card-text">Email: {{ user.email }}</p>
+            <p class="card-text">First Name: {{ user.first_name }}</p>
+            <p class="card-text">Last Name: {{ user.last_name }}</p>
+            <p class="card-text">Gender: {{ user.gender }}</p>
+            <p class="card-text">Age in Years: {{ user.age }}</p>
+            <a href="{% url 'home' %}" class="btn btn-primary">Back to Home</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+</body>
+</html>

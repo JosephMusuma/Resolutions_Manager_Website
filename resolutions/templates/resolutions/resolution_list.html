@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+{% extends 'resolutions/base.html' %}
+
+{% block content %}
+<h2>My Progress</h2>
+<ul>
+    {% for resolution in resolutions %}
+    <li><a href="{% url 'resolution_detail' resolution.pk %}">{{ resolution.title }}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}
+</body>
+</html>

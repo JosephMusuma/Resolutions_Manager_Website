@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>New Year Resolutions</title>
+</head>
+<body>
+    {% extends 'resolutions/base.html' %}
+
+    {% block title %}Dashboard{% endblock %}
+
+    {% block content %}
+
+    <h1>My Resolutions</h1>
+    <form method="get">
+    {{ search_form.as_p }}
+    <button type="submit">Search for resolution</button>
+    </form>
+    <div class="jumbotron">
+        <h1 class="display-4">Welcome to Resolutions Recommender</h1>
+        <p class="lead">Your place to track and achieve your New Year's resolutions!</p>
+        <hr class="my-4">
+        <p>Start by adding a new resolution or get recommendations based on your profile.</p>
+        <a class="btn btn-primary btn-lg" href="{% url 'add_resolution' %}" role="button">Add Resolution</a>
+        <a class="btn btn-secondary btn-lg" href="{% url 'get_recommendations' %}" role="button">Get Recommendations</a>
+    </div>
+    <ul>
+    {% for resolution in resolutions %}
+    <li class="list-group-item">
+        {{ resolution.title }} - 
+        {% if resolution.completed %}
+            <span class="badge badge-success">Completed</span>
+        {% else %}
+            <span class="badge badge-warning">Incomplete</span>
+        {% endif %}
+        <a href="{% url 'toggle_completed' resolution.id %}" class="btn btn-sm btn-primary ml-3">Mark as completed</a>
+    </li>
+    {% endfor %}
+    </ul>
+    {% endblock %}
+</body>
+</html>

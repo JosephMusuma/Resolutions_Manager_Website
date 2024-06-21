@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+</head>
+<body>
+    {% extends 'resolutions/base.html' %}
+
+{% block title %}My Progress{% endblock %}
+
+{% block content %}
+<h2>My Progress</h2>
+<ul>
+    {% for resolution in resolutions %}
+    <li>
+        <h2>{{ resolution.title }}</h2>
+        <p>{{ resolution.description }}</p>
+        <p>Progress: {{ resolution.progress_percentage }}%</p>
+{% endfor %}
+{% endblock %}
+</body>
+</html>
