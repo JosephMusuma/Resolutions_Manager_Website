@@ -21,18 +21,18 @@ Welcome to the Resolutions Recommender & Tracker! This web application helps use
 Navigate to the registration page to create a new account.
 After registering, log in with your credentials.
     
-3.  Adding Resolutions
+2.  Adding Resolutions
 
 Once logged in, navigate to the "Add Resolution" page.
 Fill in the details of your resolution, including the start and end dates, and total steps if applicable.
 Save your resolution to start tracking.
 
-5.  Tracking Progress
+3.  Tracking Progress
    
 Visit the "Progress" tab to view your resolutions and track your progress.
 Update your progress regularly to see your achievements and milestones.
     
-7.  Community Support
+4.  Community Support
    
 Join forums and groups to share your experiences
 Get tips from other users.
